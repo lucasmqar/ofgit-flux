@@ -43,3 +43,14 @@ android/local.properties
 # Large binaries
 supabase.exe
 
+# Build artifacts / archives
+*.zip
+*.tgz
+*.tar.gz
+
+# Expo (generated)
+.expo/
+
+# Supabase CLI local state
+supabase/.temp/
+
