@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="pt-BR">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+    <title>FLUX - Sistema de Gestão de Entregas Sem Taxas</title>
+    <meta name="description" content="Sistema de gestão de entregas com 0 taxas e pedidos ilimitados. Conecte empresas e entregadores de forma eficaz." />
+    <link rel="icon" type="image/png" href="/images/flux-logo.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Zen+Dots&display=swap" rel="stylesheet" />
+  </head>
+
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+    <script type="module">
+      // Optional analytics (Umami)
+      const endpoint = import.meta.env.VITE_ANALYTICS_ENDPOINT;
+      const websiteId = import.meta.env.VITE_ANALYTICS_WEBSITE_ID;
+
+      if (endpoint && websiteId) {
+        const clean = String(endpoint).replace(/\/+$/, "");
+        const s = document.createElement("script");
+        s.defer = true;
+        s.src = `${clean}/umami`;
+        s.setAttribute("data-website-id", String(websiteId));
+        document.head.appendChild(s);
+      }
+    </script>
+  </body>
+
+</html>
